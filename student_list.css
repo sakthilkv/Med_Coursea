@@ -12,10 +12,10 @@
 
 body{
 	background-color: white;
-	font-family: Product Sans;
+	font-family: 'Product Sans';
 }
 
-.hero {
+.root {
 	display: flex;
 	flex-direction: row;
 }
@@ -41,7 +41,7 @@ navbar img {
 }
 
 .sidebar {
-	height: 100vw;
+	height: 210vh;
 	width: 260px;
 	background-color: #46BD8436;
 	margin-top: 40px;
@@ -297,6 +297,7 @@ th, td {
 		padding: 8px;
 		text-align: left;
 		border: none;
+		cursor: pointer;
 }
 th {
 		background-color: #048E0470;
@@ -419,7 +420,7 @@ legend {
 
 .form-row label {
 	position: absolute;
-	top: -10px; /* Adjust based on label size */
+	top: -10px;
 	left: 0;
 	font-size: 14px;
 	color: #333;
@@ -440,14 +441,75 @@ legend {
 .mandatory {
 	color: #004D00;
 	font-size: 12px;margin-left: 5px;
+	font-weight: bolder;
 }
 
-form button {
+form button[type="submit"] {
 	padding: 0.5rem;
 	color: white;
 	background-color: #004D00;
 	border: 0.5px solid grey;
-	width: 70px;
+	width: 130px;
 	border-radius: 5px;
 
+}
+
+input[type="text"], select {
+	width: 100%;
+	padding: 8px;
+	font-size: 14px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.upload-btn-wrapper {
+	display: inline-block;
+	position: relative;
+	border: 2px dashed #ccc;
+	border-radius: 8px;
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #f9f9f9;
+	box-sizing: border-box;
+}
+
+.upload-btn {
+	background-color: #222;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 8px;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 0.3s ease;
+	position: relative;
+	z-index: 1;
+	box-sizing: border-box;
+}
+
+.upload-btn:hover {
+	background-color: #444;
+}
+
+.upload-btn-wrapper input[type="file"] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 2; 
+}
+
+#submitForm {
+	margin-top: 20px;
+}
+
+.footermain {
+	height: 300px;
+	width: 100%;
+	background-color: black;
 }

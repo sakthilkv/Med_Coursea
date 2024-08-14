@@ -104,40 +104,40 @@ const jsonData = [
 
 
 function populateTable() {
-    const tbody = document.getElementById('studentTable').getElementsByTagName('tbody')[0];
+	const tbody = document.getElementById('studentTable').getElementsByTagName('tbody')[0];
 
-    tbody.innerHTML = '';
+	tbody.innerHTML = '';
 
-    jsonData.forEach(item => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td><input type="checkbox" class="row-select"></td>
-            <td>${item.ID}</td>
-            <td>
-                <img src="${item.ImageURL}" alt="${item.Name}" class="user-image">
-                ${item.Name}
-            </td>
-            <td>${item.Class}</td>
-            <td>${item.DOB}</td>
-            <td>${item.ParentName}</td>
-            <td>${item.MobileNumber}</td>
-            <td>${item.Email}</td>
-        `;
-        tbody.appendChild(row);
-    });
+	jsonData.forEach(item => {
+		const row = document.createElement('tr');
+		row.innerHTML = `
+			<td><input type="checkbox" class="row-select"></td>
+			<td>${item.ID}</td>
+			<td>
+				<img src="${item.ImageURL}" alt="${item.Name}" class="user-image">
+				${item.Name}
+			</td>
+			<td>${item.Class}</td>
+			<td>${item.DOB}</td>
+			<td>${item.ParentName}</td>
+			<td>${item.MobileNumber}</td>
+			<td>${item.Email}</td>
+		`;
+		tbody.appendChild(row);
+	});
 
-    setupSelectAll();
+	setupSelectAll();
 }
 
 function setupSelectAll() {
-    const selectAllCheckbox = document.getElementById('select-all');
-    const rowCheckboxes = document.querySelectorAll('.row-select');
+	const selectAllCheckbox = document.getElementById('select-all');
+	const rowCheckboxes = document.querySelectorAll('.row-select');
 
-    selectAllCheckbox.addEventListener('change', () => {
-        rowCheckboxes.forEach(checkbox => {
-            checkbox.checked = selectAllCheckbox.checked;
-        });
-    });
+	selectAllCheckbox.addEventListener('change', () => {
+		rowCheckboxes.forEach(checkbox => {
+			checkbox.checked = selectAllCheckbox.checked;
+		});
+	});
 }
 
 populateTable();
