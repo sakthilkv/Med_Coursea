@@ -41,7 +41,7 @@ navbar img {
 }
 
 .sidebar {
-	height: 210vh;
+	height: auto;
 	width: 260px;
 	background-color: #46BD8436;
 	margin-top: 40px;
@@ -506,6 +506,7 @@ input[type="text"], select {
 
 #submitForm {
 	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 .footermain {
@@ -513,3 +514,4 @@ input[type="text"], select {
 	width: 100%;
 	background-color: black;
 }
+
