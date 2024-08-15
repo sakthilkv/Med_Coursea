@@ -8,7 +8,7 @@ const jsonData = [
 		"ParentName": "Venkatesh",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -18,7 +18,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -28,7 +28,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -38,7 +38,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -48,7 +48,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -58,7 +58,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -68,7 +68,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -78,7 +78,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -88,7 +88,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
 		"ID": "SEC22IT300",
@@ -98,7 +98,7 @@ const jsonData = [
 		"ParentName": "Venkatesan",
 		"MobileNumber": "8948654070",
 		"Email": "sec22it300@sairamtap.edu.in",
-		"ImageURL": "assets/pfp.jpg"
+		"ImageURL": "../assets/pfp.jpg"
 	}
 ];
 
