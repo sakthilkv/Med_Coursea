@@ -11,13 +11,13 @@ const jsonData = [
 		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
-		"ID": "SEC22IT300",
-		"Name": "Hariharan V",
+		"ID": "SEC22IT026",
+		"Name": "Shiv Shankar N",
 		"Class": "IT A",
-		"DOB": "13 Jul 2005",
-		"ParentName": "Venkatesan",
-		"MobileNumber": "8948654070",
-		"Email": "sec22it300@sairamtap.edu.in",
+		"DOB": "29 june 2005",
+		"ParentName": "Natarajan S",
+		"MobileNumber": "6381052173",
+		"Email": "sec22it026@sairamtap.edu.in",
 		"ImageURL": "../assets/pfp.jpg"
 	},
 	{
