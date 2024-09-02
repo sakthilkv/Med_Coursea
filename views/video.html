@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLS Video with Quality Control</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.7.6/dist/plyr.css" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .video-container {
+            text-align: center;
+        }
+        .plyr__video-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .quality-buttons {
+            margin-top: 10px;
+        }
+        .quality-buttons button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .quality-buttons button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <div class="plyr__video-wrapper">
+            <video id="player" controls>
+                <!-- The source will be dynamically set by JavaScript -->
+            </video>
+        </div>
+        <div class="quality-buttons">
+            <button data-quality="480">480p</button>
+            <button data-quality="720">720p</button>
+            <button data-quality="1080">1080p</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3.7.6/dist/plyr.polyfilled.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script>
+        // Function to get URL parameters
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const player = new Plyr('#player');
+        let hls;
+        const videoId = getQueryParameter('id'); // Get the 'id' parameter from the URL
+
+        if (videoId) {
+            const videoSource = `http://127.0.0.1:3020/video/${videoId}/index.m3u8`;
+
+            if (Hls.isSupported()) {
+                hls = new Hls({
+                    maxBufferLength: 30,
+                    maxMaxBufferLength: 60,
+                    startLevel: -1,
+                    liveSyncDurationCount: 3,
+                });
+                hls.loadSource(videoSource);
+                hls.attachMedia(player.media);
+
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    player.play();
+                });
+
+                // Handle quality change buttons
+                const qualityButtons = document.querySelectorAll('.quality-buttons button');
+                qualityButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const quality = button.getAttribute('data-quality');
+                        const newLevel = hls.levels.findIndex(level => level.height === parseInt(quality));
+
+                        if (newLevel !== -1 && hls.currentLevel !== newLevel) {
+                            // Set nextLevel to prepare the new quality
+                            hls.nextLevel = newLevel;
+                        }
+                    });
+                });
+            } else if (player.media.canPlayType('application/vnd.apple.mpegurl')) {
+                player.media.src = videoSource;
+            }
+        } else {
+            console.error('No video ID specified in the URL.');
+        }
+
+        
+    </script>
+</body>
+</html>
